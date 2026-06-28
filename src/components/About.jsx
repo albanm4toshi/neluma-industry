@@ -1,40 +1,33 @@
+import { useLang } from './LanguageContext'
+import { translations } from './translations'
 import './About.css'
 
 export default function About() {
+  const { lang } = useLang()
+  const t = translations[lang].about
+
   return (
     <section className="about" id="about">
       <div className="container about__inner">
         <div className="about__left">
-          <div className="section-eyebrow">About Us</div>
-          <h2 className="section-title">
-            The bridge between<br />imos iX and Kosovo.
-          </h2>
+          <div className="section-eyebrow">{t.eyebrow}</div>
+          <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="about__right">
-          <p>
-            Neluma Industry is the officially appointed distributor of imos iX for Kosovo.
-            imos iX is a leading German software solution purpose-built for the furniture
-            industry — trusted by manufacturers and designers worldwide for precision,
-            efficiency, and professional output.
-          </p>
-          <p>
-            Our role goes beyond simply selling a license. We are your local partner
-            for every stage of the software journey: from first consultation and installation
-            to ongoing support and training. We speak your language and understand the
-            local market.
-          </p>
+          <p>{t.p1}</p>
+          <p>{t.p2}</p>
           <div className="about__stats">
             <div className="about__stat">
-              <span className="about__stat-value">imos iX</span>
-              <span className="about__stat-label">Official Software</span>
+              <span className="about__stat-value">{t.stat1value}</span>
+              <span className="about__stat-label">{t.stat1label}</span>
             </div>
             <div className="about__stat">
-              <span className="about__stat-value">Kosovo</span>
-              <span className="about__stat-label">Exclusive Territory</span>
+              <span className="about__stat-value">{t.stat2value}</span>
+              <span className="about__stat-label">{t.stat2label}</span>
             </div>
             <div className="about__stat">
-              <span className="about__stat-value">DE</span>
-              <span className="about__stat-label">German Engineering</span>
+              <span className="about__stat-value">{t.stat3value}</span>
+              <span className="about__stat-label">{t.stat3label}</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useLang } from './LanguageContext'
+import { translations } from './translations'
 import './Gallery.css'
 
 import Post1Part1 from '../assets/Post_1_Part_1.jpg'
@@ -13,7 +15,7 @@ const posts = [
   { id: 3, images: [Post3Part1, Post3Part2] },
 ]
 
-function PostCard({ post }) {
+function PostCard({ post, t }) {
   const [current, setCurrent] = useState(0)
   const hasMultiple = post.images.length > 1
 
@@ -22,14 +24,13 @@ function PostCard({ post }) {
 
   return (
     <div className="post-card">
-      {/* Card Header */}
       <div className="post-card__header">
         <div className="post-card__avatar">
           <img src="/logo.jpg.jpeg" alt="Neluma Industry" />
         </div>
         <div className="post-card__meta">
           <span className="post-card__username">neluma.industry</span>
-          <span className="post-card__tag">imos iX · Kosovo</span>
+          <span className="post-card__tag">{t.tag}</span>
         </div>
         <svg className="post-card__ig-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -38,7 +39,6 @@ function PostCard({ post }) {
         </svg>
       </div>
 
-      {/* Image */}
       <div className="post-card__img-wrap">
         <img src={post.images[current]} alt={`Post ${post.id}`} className="post-card__img" />
         {hasMultiple && (
@@ -50,17 +50,14 @@ function PostCard({ post }) {
                 <span key={i} className={`post-card__dot ${i === current ? 'post-card__dot--active' : ''}`} onClick={() => setCurrent(i)} />
               ))}
             </div>
+            <div className="post-card__counter">{current + 1} / {post.images.length}</div>
           </>
-        )}
-        {hasMultiple && (
-          <div className="post-card__counter">{current + 1} / {post.images.length}</div>
         )}
       </div>
 
-      {/* Footer */}
       <div className="post-card__footer">
         <a href="https://www.instagram.com/neluma.industry/" target="_blank" rel="noopener noreferrer" className="post-card__view-btn">
-          View on Instagram
+          {t.viewOn}
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
             <polyline points="15 3 21 3 21 9"/>
@@ -73,16 +70,19 @@ function PostCard({ post }) {
 }
 
 export default function Gallery() {
+  const { lang } = useLang()
+  const t = translations[lang].gallery
+
   return (
     <section className="gallery" id="gallery">
       <div className="container">
         <div className="gallery__header">
-          <div className="section-eyebrow">Latest Posts</div>
-          <h2 className="section-title">From our Instagram.</h2>
+          <div className="section-eyebrow">{t.eyebrow}</div>
+          <h2 className="section-title">{t.title}</h2>
         </div>
         <div className="gallery__grid">
           {posts.map(post => (
-            <PostCard key={post.id} post={post} />
+            <PostCard key={post.id} post={post} t={t} />
           ))}
         </div>
       </div>

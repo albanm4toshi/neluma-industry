@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useLang } from './LanguageContext'
+import { translations } from './translations'
 import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { lang, setLang } = useLang()
+  const t = translations[lang].nav
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -12,9 +16,9 @@ export default function Navbar() {
   }, [])
 
   const links = [
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
+    { label: t.about, href: '#about' },
+    { label: t.services, href: '#services' },
+    { label: t.contact, href: '#contact' },
   ]
 
   return (
@@ -32,13 +36,31 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label="Toggle menu"
-        >
-          <span /><span /><span />
-        </button>
+        <div className="navbar__right">
+          <div className="lang-switcher">
+            <button
+              className={`lang-btn ${lang === 'al' ? 'lang-btn--active' : ''}`}
+              onClick={() => setLang('al')}
+            >
+              AL
+            </button>
+            <span className="lang-divider">|</span>
+            <button
+              className={`lang-btn ${lang === 'en' ? 'lang-btn--active' : ''}`}
+              onClick={() => setLang('en')}
+            >
+              EN
+            </button>
+          </div>
+
+          <button
+            className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </div>
     </nav>
   )

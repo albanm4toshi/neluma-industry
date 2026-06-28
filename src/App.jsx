@@ -1,3 +1,4 @@
+import { LanguageProvider } from './components/LanguageContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,14 +10,16 @@ import './App.css'
 
 export default function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Gallery />
-      <Contact />
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="app">
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <Gallery />
+        <Contact />
+        <Footer />
+      </div>
+    </LanguageProvider>
   )
 }
