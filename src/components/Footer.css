@@ -1,6 +1,7 @@
 .footer {
   padding: 2.5rem 0;
   border-top: 1px solid var(--border);
+  background: linear-gradient(to bottom, transparent, rgba(0, 25, 65, 0.5));
 }
 
 .footer__inner {
@@ -10,23 +11,17 @@
   gap: 1rem;
 }
 
-.footer__logo {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
+.footer__logo-img {
+  height: 32px;
+  width: auto;
   display: block;
   margin-bottom: 0.25rem;
-}
-
-.footer__logo span {
-  color: var(--accent);
 }
 
 .footer__left p,
 .footer__right p {
   font-size: 0.8rem;
-  color: var(--mid);
+  color: var(--white-dim);
 }
 
 @media (max-width: 600px) {
@@ -35,4 +30,13 @@
     align-items: flex-start;
     gap: 0.75rem;
   }
+}
+
+.footer__brand {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+  margin-bottom: 0.25rem;
 }

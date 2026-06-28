@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__left">
-          <span className="footer__logo">Neluma<span>Industry</span></span>
+          <span className="footer__brand">Neluma Industry</span>
           <p>Official imos iX Distributor — Kosovo</p>
         </div>
         <div className="footer__right">

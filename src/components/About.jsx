@@ -14,7 +14,7 @@ export default function About() {
           <p>
             Neluma Industry is the officially appointed distributor of imos iX for Kosovo.
             imos iX is a leading German software solution purpose-built for the furniture
-            industry — trusted by manufacturers and designers across Europe for precision,
+            industry — trusted by manufacturers and designers worldwide for precision,
             efficiency, and professional output.
           </p>
           <p>

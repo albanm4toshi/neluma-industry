@@ -12,6 +12,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border: 1px solid var(--border);
+  border-radius: 2px;
 }
 
 .service-card {
@@ -19,10 +20,28 @@
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .service-card:hover {
-  background: var(--off-black);
+  background: var(--white-faint);
+}
+
+.service-card:hover::before {
+  opacity: 1;
 }
 
 .service-card:nth-child(3n) {
@@ -37,7 +56,7 @@
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--blue);
   letter-spacing: 0.08em;
   margin-bottom: 1.25rem;
 }
@@ -53,7 +72,7 @@
 
 .service-card__desc {
   font-size: 0.9rem;
-  color: var(--light-mid);
+  color: var(--white-dim);
   line-height: 1.75;
 }
 
