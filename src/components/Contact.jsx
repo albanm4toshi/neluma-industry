@@ -30,6 +30,9 @@ export default function Contact() {
               <a href="https://www.facebook.com/profile.php?id=61591171350782" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
                 {t.facebook}
               </a>
+              <a href="https://www.linkedin.com/company/neluma-industry/" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
+                {t.linkedin}
+              </a>
               <a href="mailto:neluma.industry@gmail.com" className="btn btn--ghost">
                 {t.email}
               </a>

@@ -71,6 +71,7 @@ export const translations = {
       cardText: 'Na dërgoni një mesazh ose na kontaktoni drejtpërdrejt. Përgjigjemi menjëherë.',
       instagram: 'Mesazh në Instagram',
       facebook: 'Mesazh në Facebook',
+      linkedin: 'Mesazh në LinkedIn',
       email: 'Dërgo Email',
     },
     footer: {
@@ -150,6 +151,7 @@ export const translations = {
       cardText: 'Send us a message or reach out directly. We respond promptly.',
       instagram: 'Message on Instagram',
       facebook: 'Message on Facebook',
+      linkedin: 'Message on LinkedIn',
       email: 'Send an Email',
     },
     footer: {
