@@ -1,0 +1,80 @@
+.contact {
+  padding: 7rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact__desc {
+  color: var(--light-mid);
+  line-height: 1.8;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 380px;
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.contact__social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--light-mid);
+  transition: color 0.2s;
+}
+
+.contact__social-link:hover {
+  color: var(--accent);
+}
+
+.contact__card {
+  padding: 2.5rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+}
+
+.contact__card-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contact__card-text {
+  color: var(--light-mid);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.contact__card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact__card-actions .btn {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 5rem 0;
+  }
+
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
