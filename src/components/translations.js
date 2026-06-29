@@ -9,11 +9,11 @@ export const translations = {
       eyebrow: 'Partner Zyrtar i Shpërndarjes · Kosovë',
       title1: 'imos iX',
       title2: 'në Kosovë.',
-      subtitle: 'Neluma Industry është distributorit zyrtar i imos iX — softueri lider gjerman për dizajn dhe prodhim të mobiljeve — për tregun e Kosovës.',
+      subtitle: 'Neluma Industry është distributori zyrtar i imos iX — softueri lider gjerman për dizajn dhe prodhim të mobiljeve — për tregun e Kosovës.',
       cta1: 'Shërbimet Tona',
       cta2: 'Na Kontaktoni',
       badgeLabel: 'Sponsorizuar nga',
-      badgeName: 'Neluma Industry',
+      inPartnership: 'në partneritet me',
     },
     about: {
       eyebrow: 'Rreth Nesh',
@@ -49,7 +49,7 @@ export const translations = {
         },
         {
           title: 'Mbështetje Teknike',
-          description: 'Mbështetje lokale e vazhdueshme për çdo problem, përditësim apo pyetje. Ju komunikoni me ne — pa barriera gjuhësore, pa pritje kohe të gjata.',
+          description: 'Mbështetje lokale e vazhdueshme për çdo problem, përditësim apo pyetje. Ju komunikoni me ne — pa barriera gjuhësore, pa pritje kohore të gjata.',
         },
         {
           title: 'Konsultim',
@@ -68,7 +68,7 @@ export const translations = {
       title: 'Gati të sillni\nimos iX në\nbiznesin tuaj?',
       desc: 'Nëse jeni duke eksploruar imos iX për herë të parë ose jeni gati të filloni, na kontaktoni dhe do t\'ju udhëzojmë hap pas hapi.',
       cardLabel: 'Kontakti Direkt',
-      cardText: 'Na dërgoni një mesazh ose na kontaktoni drejtpërdrejt. Përgjigjemi menjëherë.',
+      cardText: 'Na dërgoni një mesazh dhe pranoni një përgjigje të shpejtë.',
       instagram: 'Mesazh në Instagram',
       facebook: 'Mesazh në Facebook',
       linkedin: 'Mesazh në LinkedIn',
@@ -93,7 +93,7 @@ export const translations = {
       cta1: 'Our Services',
       cta2: 'Get in Touch',
       badgeLabel: 'Powered by',
-      badgeName: 'Neluma Industry',
+      inPartnership: 'in partnership with',
     },
     about: {
       eyebrow: 'About Us',

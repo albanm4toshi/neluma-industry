@@ -8,7 +8,6 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero__bg-line" />
       <div className="container hero__inner">
         <div className="hero__eyebrow">{t.eyebrow}</div>
         <h1 className="hero__title">
@@ -20,10 +19,15 @@ export default function Hero() {
           <a href="#services" className="btn btn--primary">{t.cta1}</a>
           <a href="#contact" className="btn btn--ghost">{t.cta2}</a>
         </div>
+
         <div className="hero__badge">
-          <div className="hero__badge-inner">
+          <div className="hero__badge-row hero__badge-row--main">
             <span className="hero__badge-label">{t.badgeLabel}</span>
-            <span className="hero__badge-name">{t.badgeName}</span>
+            <span className="hero__badge-name">Neluma Industry</span>
+          </div>
+          <div className="hero__badge-row hero__badge-row--partners">
+            <span className="hero__badge-partner-label">{t.inPartnership}</span>
+            <span className="hero__badge-partners">MOS Consult &amp; imos AG</span>
           </div>
         </div>
       </div>

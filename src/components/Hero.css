@@ -169,3 +169,62 @@
     margin-top: 3rem;
   }
 }
+
+.hero__badge {
+  margin-top: 5rem;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  background: var(--white-faint);
+  backdrop-filter: blur(8px);
+}
+
+.hero__badge-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+}
+
+.hero__badge-row--partners {
+  border-top: 1px solid var(--border);
+  padding: 0.45rem 1.25rem;
+  align-items: flex-end;
+}
+
+.hero__badge-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white-dim);
+}
+
+.hero__badge-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.hero__badge-partner-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-dim);
+  opacity: 0.7;
+}
+
+.hero__badge-partners {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .hero__badge {
+    margin-top: 3rem;
+  }
+}
