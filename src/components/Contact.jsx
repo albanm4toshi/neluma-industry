@@ -9,6 +9,7 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="container contact__inner">
+
         <div className="contact__left">
           <div className="section-eyebrow">{t.eyebrow}</div>
           <h2 className="section-title">
@@ -20,25 +21,29 @@ export default function Contact() {
         </div>
 
         <div className="contact__right">
-          <div className="contact__card">
-            <p className="contact__card-label">{t.cardLabel}</p>
-            <p className="contact__card-text">{t.cardText}</p>
-            <div className="contact__card-actions">
-              <a href="https://www.instagram.com/neluma.industry/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-                {t.instagram}
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=61591171350782" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
-                {t.facebook}
-              </a>
-              <a href="https://www.linkedin.com/company/neluma-industry/" target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
-                {t.linkedin}
-              </a>
-              <a href="mailto:neluma.industry@gmail.com" className="btn btn--ghost">
-                {t.email}
-              </a>
+          <div className="contact__info">
+            <p className="contact__info-label">{t.infoLabel}</p>
+            <div className="contact__info-items">
+              <div className="contact__info-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <polyline points="2,4 12,13 22,4"/>
+                </svg>
+                <a href="mailto:neluma.industry@gmail.com" className="contact__info-link">
+                  neluma.industry@gmail.com
+                </a>
+              </div>
+              <div className="contact__info-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>{t.location}</span>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
