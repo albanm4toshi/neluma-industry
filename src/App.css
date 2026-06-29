@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -18,8 +18,8 @@
   --white-faint: rgba(248, 248, 246, 0.12);
   --border: rgba(93, 167, 254, 0.15);
   --border-strong: rgba(93, 167, 254, 0.3);
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Roboto', sans-serif;
+  --font-body: 'Roboto', sans-serif;
 }
 
 html {
