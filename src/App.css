@@ -15,9 +15,11 @@
   --blue-glow: rgba(93, 167, 254, 0.15);
   --white: #f8f8f6;
   --white-dim: rgba(248, 248, 246, 0.7);
-  --white-faint: rgba(248, 248, 246, 0.12);
+  --white-faint: rgba(248, 248, 246, 0.06);
   --border: rgba(93, 167, 254, 0.15);
   --border-strong: rgba(93, 167, 254, 0.3);
+  --gradient-text: linear-gradient(135deg, #5da7fe 0%, #a8d4ff 100%);
+  --gradient-bg: linear-gradient(160deg, #001941 0%, #002a5e 50%, #001228 100%);
   --font-display: 'Roboto', sans-serif;
   --font-body: 'Roboto', sans-serif;
 }
@@ -27,7 +29,8 @@ html {
 }
 
 body {
-  background: var(--navy);
+  background: var(--gradient-bg);
+  background-attachment: fixed;
   color: var(--white);
   font-family: var(--font-body);
   font-size: 16px;
@@ -52,6 +55,14 @@ img {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* Global gradient text utility */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (max-width: 768px) {
