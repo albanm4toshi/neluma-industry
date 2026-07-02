@@ -26,7 +26,7 @@ function PostCard({ post, t }) {
     <div className="post-card">
       <div className="post-card__header">
         <div className="post-card__avatar">
-          <img src="/logo.jpg.jpeg" alt="Neluma Industry" />
+          <img src="logo_real_square.jpg" alt="Neluma Industry" />
         </div>
         <div className="post-card__meta">
           <span className="post-card__username">neluma.industry</span>
