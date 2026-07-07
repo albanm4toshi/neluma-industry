@@ -1,0 +1,145 @@
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.12; }
+  50%       { opacity: 0.22; }
+}
+
+/* ── Scroll-triggered reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ── Navbar slide down on load ── */
+.navbar {
+  animation: slideDown 0.6s ease forwards;
+}
+
+/* ── Hero animations ── */
+.hero__eyebrow {
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+
+.hero__title {
+  animation: fadeUp 0.7s ease 0.5s both;
+}
+
+.hero__subtitle {
+  animation: fadeUp 0.7s ease 0.7s both;
+}
+
+.hero__cta {
+  animation: fadeUp 0.7s ease 0.9s both;
+}
+
+.hero__badge {
+  animation: fadeUp 0.7s ease 1.1s both;
+}
+
+/* ── Glow pulse on hero background ── */
+.hero::before {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* ── Button press effect ── */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn--primary:active {
+  transform: scale(0.97);
+}
+
+.btn--ghost:active {
+  transform: scale(0.97);
+}
+
+/* ── Service card hover lift ── */
+.service-card {
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(93, 167, 254, 0.1);
+}
+
+/* ── Post card hover ── */
+.post-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(93, 167, 254, 0.15);
+}
+
+/* ── Stat value count-up shimmer ── */
+.about__stat-value {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.about__stat-value:hover {
+  transform: scale(1.08);
+}
+
+/* ── Contact info item hover ── */
+.contact__info-item {
+  transition: transform 0.2s ease;
+}
+
+.contact__info-item:hover {
+  transform: translateX(4px);
+}
+
+/* ── Footer social bounce ── */
+.footer__social {
+  transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s ease;
+}
+
+.footer__social:hover {
+  transform: translateY(-3px);
+}
+
+/* ── Lang switcher ── */
+.lang-btn {
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.lang-btn:hover {
+  transform: scale(1.1);
+}
